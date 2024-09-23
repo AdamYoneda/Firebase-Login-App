@@ -23,6 +23,15 @@
             android:src="@drawable/icon_account_circle"
             />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"
+
+
     </LinearLayout>
 
 </RelativeLayout>
