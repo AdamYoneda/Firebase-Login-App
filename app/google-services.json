@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "169893078763",
+    "project_id": "diffabledatasourcechatbootcamp",
+    "storage_bucket": "diffabledatasourcechatbootcamp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169893078763:android:032a099971d35bea3a40ae",
+        "android_client_info": {
+          "package_name": "com.example.firebaseloginapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdQQpbmvHKUnh6HsTIzimNC3nqB_dAk2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
