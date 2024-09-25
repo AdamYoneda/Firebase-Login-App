@@ -8,12 +8,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var usernameInput : EditText
     lateinit var passwordInput : EditText
     lateinit var loginBtn : Button
+    // 1. FirebaseAuth インスタンスを宣言します。
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +39,19 @@ class MainActivity : AppCompatActivity() {
             val password = passwordInput.text.toString()
 
             Log.i("Test Credentials","Username : $username and Password : $password")
+        }
+        // 2.onCreate() メソッドで、FirebaseAuth インスタンスを初期化します。
+        // Initialize Firebase Auth
+        auth = Firebase.auth
+    }
+
+    // 3. アクティビティを初期化するときに、ユーザーが現在ログインしているかどうかを確認します。
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+//            reload()
         }
     }
 }
