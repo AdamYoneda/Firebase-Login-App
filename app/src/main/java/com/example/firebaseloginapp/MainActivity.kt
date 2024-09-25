@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var usernameInput : EditText
     lateinit var passwordInput : EditText
     lateinit var loginBtn : Button
-    // 1. FirebaseAuth インスタンスを宣言します。
+    // 1-1. FirebaseAuth インスタンスを宣言します。
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,12 +40,12 @@ class MainActivity : AppCompatActivity() {
 
             Log.i("Test Credentials","Username : $username and Password : $password")
         }
-        // 2.onCreate() メソッドで、FirebaseAuth インスタンスを初期化します。
+        // 1-2.onCreate() メソッドで、FirebaseAuth インスタンスを初期化します。
         // Initialize Firebase Auth
         auth = Firebase.auth
     }
 
-    // 3. アクティビティを初期化するときに、ユーザーが現在ログインしているかどうかを確認します。
+    // 1-3. アクティビティを初期化するときに、ユーザーが現在ログインしているかどうかを確認します。
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
